@@ -1,0 +1,14 @@
+com.deepanshuchaudhary.pdf_manipulator-jetified-window-java-1.0.0-beta04-0 /Users/gopukrishnan/.gradle/caches/transforms-3/006d93cd422dbc43e89591147c2de572/transformed/jetified-window-java-1.0.0-beta04/res
+com.deepanshuchaudhary.pdf_manipulator-jetified-core-ktx-1.9.0-1 /Users/gopukrishnan/.gradle/caches/transforms-3/3e6c979ab8eca9aa1eeca6cb7cd9f261/transformed/jetified-core-ktx-1.9.0/res
+com.deepanshuchaudhary.pdf_manipulator-core-1.9.0-2 /Users/gopukrishnan/.gradle/caches/transforms-3/5f80b20db3afa86c72a9766b008d752d/transformed/core-1.9.0/res
+com.deepanshuchaudhary.pdf_manipulator-lifecycle-runtime-2.3.1-3 /Users/gopukrishnan/.gradle/caches/transforms-3/76da31ad033c53187dd7271282d0f7d2/transformed/lifecycle-runtime-2.3.1/res
+com.deepanshuchaudhary.pdf_manipulator-jetified-window-1.0.0-beta04-4 /Users/gopukrishnan/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/res
+com.deepanshuchaudhary.pdf_manipulator-jetified-annotation-experimental-1.3.0-5 /Users/gopukrishnan/.gradle/caches/transforms-3/ec10578641139d45a328c567f48881a1/transformed/jetified-annotation-experimental-1.3.0/res
+com.deepanshuchaudhary.pdf_manipulator-main-6 /Users/gopukrishnan/.pub-cache/hosted/pub.dev/pdf_manipulator-0.5.9/android/src/main/res
+com.deepanshuchaudhary.pdf_manipulator-release-7 /Users/gopukrishnan/.pub-cache/hosted/pub.dev/pdf_manipulator-0.5.9/android/src/release/res
+com.deepanshuchaudhary.pdf_manipulator-pngs-8 /Users/gopukrishnan/Documents/personal/pdf-ops/build/pdf_manipulator/generated/res/pngs/release
+com.deepanshuchaudhary.pdf_manipulator-resValues-9 /Users/gopukrishnan/Documents/personal/pdf-ops/build/pdf_manipulator/generated/res/resValues/release
+com.deepanshuchaudhary.pdf_manipulator-rs-10 /Users/gopukrishnan/Documents/personal/pdf-ops/build/pdf_manipulator/generated/res/rs/release
+com.deepanshuchaudhary.pdf_manipulator-mergeReleaseResources-11 /Users/gopukrishnan/Documents/personal/pdf-ops/build/pdf_manipulator/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.deepanshuchaudhary.pdf_manipulator-mergeReleaseResources-12 /Users/gopukrishnan/Documents/personal/pdf-ops/build/pdf_manipulator/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.deepanshuchaudhary.pdf_manipulator-merged_res-13 /Users/gopukrishnan/Documents/personal/pdf-ops/build/pdf_manipulator/intermediates/merged_res/release

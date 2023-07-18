@@ -1,0 +1,170 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.nodex.pdfops.pdf_ops"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission
+11-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:3:5-107
+12        android:name="android.permission.READ_EXTERNAL_STORAGE"
+12-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:3:22-77
+13        android:maxSdkVersion="33" />
+13-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:3:78-104
+14    <uses-permission
+14-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:4:5-109
+15        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+15-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:4:22-78
+16        android:maxSdkVersion="33" />
+16-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:4:79-105
+17    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+17-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:5:5-81
+17-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:5:22-79
+18    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+18-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:6:5-75
+18-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:6:22-73
+19
+20    <queries>
+20-->[:file_picker] /Users/gopukrishnan/Documents/personal/pdf-ops/build/file_picker/intermediates/merged_manifest/release/AndroidManifest.xml:11:5-17:15
+21        <intent>
+21-->[:file_picker] /Users/gopukrishnan/Documents/personal/pdf-ops/build/file_picker/intermediates/merged_manifest/release/AndroidManifest.xml:12:9-16:18
+22            <action android:name="android.intent.action.GET_CONTENT" />
+22-->[:file_picker] /Users/gopukrishnan/Documents/personal/pdf-ops/build/file_picker/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-72
+22-->[:file_picker] /Users/gopukrishnan/Documents/personal/pdf-ops/build/file_picker/intermediates/merged_manifest/release/AndroidManifest.xml:13:21-69
+23
+24            <data android:mimeType="*/*" />
+24-->[:file_picker] /Users/gopukrishnan/Documents/personal/pdf-ops/build/file_picker/intermediates/merged_manifest/release/AndroidManifest.xml:15:13-44
+24-->[:file_picker] /Users/gopukrishnan/Documents/personal/pdf-ops/build/file_picker/intermediates/merged_manifest/release/AndroidManifest.xml:15:19-41
+25        </intent>
+26    </queries>
+27
+28    <permission
+28-->[androidx.core:core:1.9.0] /Users/gopukrishnan/.gradle/caches/transforms-3/5f80b20db3afa86c72a9766b008d752d/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+29        android:name="com.nodex.pdfops.pdf_ops.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+29-->[androidx.core:core:1.9.0] /Users/gopukrishnan/.gradle/caches/transforms-3/5f80b20db3afa86c72a9766b008d752d/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+30        android:protectionLevel="signature" />
+30-->[androidx.core:core:1.9.0] /Users/gopukrishnan/.gradle/caches/transforms-3/5f80b20db3afa86c72a9766b008d752d/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+31
+32    <uses-permission android:name="com.nodex.pdfops.pdf_ops.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+32-->[androidx.core:core:1.9.0] /Users/gopukrishnan/.gradle/caches/transforms-3/5f80b20db3afa86c72a9766b008d752d/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+32-->[androidx.core:core:1.9.0] /Users/gopukrishnan/.gradle/caches/transforms-3/5f80b20db3afa86c72a9766b008d752d/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+33
+34    <application
+35        android:name="android.app.Application"
+35-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:9:9-42
+36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+36-->[androidx.core:core:1.9.0] /Users/gopukrishnan/.gradle/caches/transforms-3/5f80b20db3afa86c72a9766b008d752d/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+37        android:icon="@mipmap/launcher_icon"
+37-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:10:9-45
+38        android:label="pdf_ops" >
+38-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:8:9-32
+39        <activity
+39-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:12:9-32:20
+40            android:name="com.nodex.pdfops.pdf_ops.MainActivity"
+40-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:13:13-41
+41            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+41-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:17:13-163
+42            android:exported="true"
+42-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:14:13-36
+43            android:hardwareAccelerated="true"
+43-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:18:13-47
+44            android:launchMode="singleTop"
+44-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:15:13-43
+45            android:theme="@style/LaunchTheme"
+45-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:16:13-47
+46            android:windowSoftInputMode="adjustResize" >
+46-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:19:13-55
+47
+48            <!--
+49                 Specifies an Android theme to apply to this Activity as soon as
+50                 the Android process has started. This theme is visible to the user
+51                 while the Flutter UI initializes. After that, this theme continues
+52                 to determine the Window background behind the Flutter UI.
+53            -->
+54            <meta-data
+54-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:24:13-27:17
+55                android:name="io.flutter.embedding.android.NormalTheme"
+55-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:25:15-70
+56                android:resource="@style/NormalTheme" />
+56-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:26:15-52
+57
+58            <intent-filter>
+58-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:28:13-31:29
+59                <action android:name="android.intent.action.MAIN" />
+59-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:29:17-68
+59-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:29:25-66
+60
+61                <category android:name="android.intent.category.LAUNCHER" />
+61-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:30:17-76
+61-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:30:27-74
+62            </intent-filter>
+63        </activity>
+64        <!--
+65             Don't delete the meta-data below.
+66             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+67        -->
+68        <meta-data
+68-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:35:9-37:33
+69            android:name="flutterEmbedding"
+69-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:36:13-44
+70            android:value="2" />
+70-->/Users/gopukrishnan/Documents/personal/pdf-ops/android/app/src/main/AndroidManifest.xml:37:13-30
+71        <!--
+72           Declares a provider which allows us to store files to share in
+73           '.../caches/share_plus' and grant the receiving action access
+74        -->
+75        <provider
+75-->[:share_plus] /Users/gopukrishnan/Documents/personal/pdf-ops/build/share_plus/intermediates/merged_manifest/release/AndroidManifest.xml:15:9-23:20
+76            android:name="dev.fluttercommunity.plus.share.ShareFileProvider"
+76-->[:share_plus] /Users/gopukrishnan/Documents/personal/pdf-ops/build/share_plus/intermediates/merged_manifest/release/AndroidManifest.xml:16:13-77
+77            android:authorities="com.nodex.pdfops.pdf_ops.flutter.share_provider"
+77-->[:share_plus] /Users/gopukrishnan/Documents/personal/pdf-ops/build/share_plus/intermediates/merged_manifest/release/AndroidManifest.xml:17:13-74
+78            android:exported="false"
+78-->[:share_plus] /Users/gopukrishnan/Documents/personal/pdf-ops/build/share_plus/intermediates/merged_manifest/release/AndroidManifest.xml:18:13-37
+79            android:grantUriPermissions="true" >
+79-->[:share_plus] /Users/gopukrishnan/Documents/personal/pdf-ops/build/share_plus/intermediates/merged_manifest/release/AndroidManifest.xml:19:13-47
+80            <meta-data
+80-->[:share_plus] /Users/gopukrishnan/Documents/personal/pdf-ops/build/share_plus/intermediates/merged_manifest/release/AndroidManifest.xml:20:13-22:68
+81                android:name="android.support.FILE_PROVIDER_PATHS"
+81-->[:share_plus] /Users/gopukrishnan/Documents/personal/pdf-ops/build/share_plus/intermediates/merged_manifest/release/AndroidManifest.xml:21:17-67
+82                android:resource="@xml/flutter_share_file_paths" />
+82-->[:share_plus] /Users/gopukrishnan/Documents/personal/pdf-ops/build/share_plus/intermediates/merged_manifest/release/AndroidManifest.xml:22:17-65
+83        </provider>
+84        <!--
+85           This manifest declared broadcast receiver allows us to use an explicit
+86           Intent when creating a PendingItent to be informed of the user's choice
+87        -->
+88        <receiver
+88-->[:share_plus] /Users/gopukrishnan/Documents/personal/pdf-ops/build/share_plus/intermediates/merged_manifest/release/AndroidManifest.xml:28:9-34:20
+89            android:name="dev.fluttercommunity.plus.share.SharePlusPendingIntent"
+89-->[:share_plus] /Users/gopukrishnan/Documents/personal/pdf-ops/build/share_plus/intermediates/merged_manifest/release/AndroidManifest.xml:29:13-82
+90            android:exported="false" >
+90-->[:share_plus] /Users/gopukrishnan/Documents/personal/pdf-ops/build/share_plus/intermediates/merged_manifest/release/AndroidManifest.xml:30:13-37
+91            <intent-filter>
+91-->[:share_plus] /Users/gopukrishnan/Documents/personal/pdf-ops/build/share_plus/intermediates/merged_manifest/release/AndroidManifest.xml:31:13-33:29
+92                <action android:name="EXTRA_CHOSEN_COMPONENT" />
+92-->[:share_plus] /Users/gopukrishnan/Documents/personal/pdf-ops/build/share_plus/intermediates/merged_manifest/release/AndroidManifest.xml:32:17-65
+92-->[:share_plus] /Users/gopukrishnan/Documents/personal/pdf-ops/build/share_plus/intermediates/merged_manifest/release/AndroidManifest.xml:32:25-62
+93            </intent-filter>
+94        </receiver>
+95
+96        <uses-library
+96-->[androidx.window:window:1.0.0-beta04] /Users/gopukrishnan/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+97            android:name="androidx.window.extensions"
+97-->[androidx.window:window:1.0.0-beta04] /Users/gopukrishnan/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+98            android:required="false" />
+98-->[androidx.window:window:1.0.0-beta04] /Users/gopukrishnan/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+99        <uses-library
+99-->[androidx.window:window:1.0.0-beta04] /Users/gopukrishnan/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+100            android:name="androidx.window.sidecar"
+100-->[androidx.window:window:1.0.0-beta04] /Users/gopukrishnan/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+101            android:required="false" />
+101-->[androidx.window:window:1.0.0-beta04] /Users/gopukrishnan/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+102    </application>
+103
+104</manifest>

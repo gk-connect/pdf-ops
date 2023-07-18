@@ -13,7 +13,14 @@
          to allow setting breakpoints, to provide hot reload, etc.
     -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="33" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="33" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
     <queries>
         <intent>
@@ -23,12 +30,18 @@
         </intent>
     </queries>
 
+    <permission
+        android:name="com.nodex.pdfops.pdf_ops.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.nodex.pdfops.pdf_ops.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
     <application
         android:name="android.app.Application"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="pdf_ops" >
+        android:icon="@mipmap/launcher_icon"
+        android:label="PdfOps" >
         <activity
             android:name="com.nodex.pdfops.pdf_ops.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
@@ -61,6 +74,30 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <!--
+           Declares a provider which allows us to store files to share in
+           '.../caches/share_plus' and grant the receiving action access
+        -->
+        <provider
+            android:name="dev.fluttercommunity.plus.share.ShareFileProvider"
+            android:authorities="com.nodex.pdfops.pdf_ops.flutter.share_provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/flutter_share_file_paths" />
+        </provider>
+        <!--
+           This manifest declared broadcast receiver allows us to use an explicit
+           Intent when creating a PendingItent to be informed of the user's choice
+        -->
+        <receiver
+            android:name="dev.fluttercommunity.plus.share.SharePlusPendingIntent"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="EXTRA_CHOSEN_COMPONENT" />
+            </intent-filter>
+        </receiver>
 
         <uses-library
             android:name="androidx.window.extensions"

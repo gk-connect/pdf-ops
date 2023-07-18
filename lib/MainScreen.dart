@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_pdfview/flutter_pdfview.dart';
+import 'package:lottie/lottie.dart';
 import 'package:pdf_ops/management/AppStore.dart';
 import 'package:pdf_ops/management/mutations.dart';
 import 'package:pdf_ops/widgets/pdfPreview.dart';
@@ -26,44 +26,57 @@ class MainScreen extends StatelessWidget {
                 ? Container(
                     margin: EdgeInsets.only(left: 10, right: 10),
                     child: ElevatedButton(
-                        onPressed: () {}, child: "Next".text.make()))
+                        onPressed: () {
+                          clearFilePath();
+                          context.router.pushNamed("/pdf-route");
+                        },
+                        child: "Next".text.make()))
                 : Container()
           ],
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            10.heightBox,
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                "Files Selected: ${store.files.length}".text.make(),
-              ],
-            ),
-            (store.files.isNotEmpty)
-                ? Expanded(
-                    child: GridView.builder(
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        crossAxisSpacing: 10,
-                        mainAxisSpacing: 10,
-                      ),
-                      itemCount: store.files.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return PdfPreview(
-                          filePath: store.files[index].path,
-                          index: index,
-                        );
-                      },
-                    ),
-                  )
-                : Container(),
-          ],
-        ),
+        body: store.files.isEmpty
+            ? Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Lottie.asset('assets/add_files.json'),
+                  "@gopu_krishnan".text.bold.gray800.make()
+                ],
+              )
+            : Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  10.heightBox,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      "Files Selected: ${store.files.length}".text.make(),
+                    ],
+                  ),
+                  (store.files.isNotEmpty)
+                      ? Expanded(
+                          child: GridView.builder(
+                            gridDelegate:
+                                const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              crossAxisSpacing: 10,
+                              mainAxisSpacing: 10,
+                            ),
+                            itemCount: store.files.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return PdfPreview(
+                                filePath: store.files[index].path,
+                                index: index,
+                              );
+                            },
+                          ),
+                        )
+                      : Container(),
+                ],
+              ),
         floatingActionButton: FloatingActionButton(
           onPressed: () => PickFiles(),
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
         ));
   }
 }

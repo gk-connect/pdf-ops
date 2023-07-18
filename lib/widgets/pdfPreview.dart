@@ -24,7 +24,7 @@ class PdfPreview extends StatelessWidget {
             autoSpacing: false,
             pageSnap: true,
             defaultPage: 0,
-            fitPolicy: FitPolicy.BOTH,
+            fitPolicy: FitPolicy.WIDTH,
             preventLinkNavigation: false,
             onPageError: (page, error) {
               print('Error occurred while loading page $page: $error');

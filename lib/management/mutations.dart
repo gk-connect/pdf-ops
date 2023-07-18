@@ -1,15 +1,17 @@
 import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
+import 'package:flutter/material.dart';
+import 'package:pdf_manipulator/pdf_manipulator.dart';
 import 'package:pdf_ops/management/AppStore.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class PickFiles extends VxMutation<PdfAppStore> {
   @override
   perform() async {
-    // Request the necessary permissions
-    PermissionStatus status = await Permission.storage.request();
+    PermissionStatus status = await Permission.manageExternalStorage.request();
     if (status.isGranted) {
       store?.files = [];
       FilePickerResult? result = await FilePicker.platform.pickFiles(
@@ -19,19 +21,11 @@ class PickFiles extends VxMutation<PdfAppStore> {
       );
       if (result != null) {
         store?.files = result.paths.map((path) => File(path!)).toList();
-        print(store!.files);
       } else {
-        // User canceled the picker
-        print("User canceled the picker");
+        openAppSettings();
       }
     } else {
-      print("User canceled the permission");
-      // Permissions were denied
-      if (status.isPermanentlyDenied) {
-        // Permissions were permanently denied, show a snackbar or dialog to explain how to grant permissions manually
-      } else {
-        // Permissions were denied, show a snackbar or dialog to inform the user
-      }
+      openAppSettings();
     }
   }
 }
@@ -42,4 +36,36 @@ class RemoveFile extends VxMutation<PdfAppStore> {
   RemoveFile({required this.index});
   @override
   perform() => store!.files.removeAt(index);
+}
+
+class MergePdf extends VxMutation<PdfAppStore> {
+  @override
+  perform() async {
+    List<String> pdfPath = [];
+    store!.mergedFilePath = "";
+    pdfPath = store!.files.map((e) => e.path).toList();
+
+    store!.mergedFilePath = (await PdfManipulator().mergePDFs(
+      params: PDFMergerParams(pdfsPaths: pdfPath),
+    ))!;
+    // Share.shareXFiles([XFile(mergedPdfPath!.toString())], text: 'Merged PDF');
+  }
+}
+
+class setSaveFilePath extends VxMutation<PdfAppStore> {
+  final String path;
+
+  setSaveFilePath(this.path);
+
+  @override
+  perform() {
+    store?.saveFilePath = path;
+  }
+}
+
+class clearFilePath extends VxMutation<PdfAppStore> {
+  @override
+  perform() {
+    store?.mergedFilePath = "";
+  }
 }
