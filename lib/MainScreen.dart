@@ -24,7 +24,7 @@ class MainScreen extends StatelessWidget {
           actions: [
             (store.files.isNotEmpty)
                 ? Container(
-                    margin: EdgeInsets.only(left: 10, right: 10),
+                    margin: const EdgeInsets.only(left: 10, right: 10),
                     child: ElevatedButton(
                         onPressed: () {
                           clearFilePath();

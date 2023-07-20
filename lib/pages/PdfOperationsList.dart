@@ -23,8 +23,8 @@ class PdfOperationsList extends StatelessWidget {
       body: ListView(children: [
         10.heightBox,
         Container(
-          margin: EdgeInsets.all(5),
-          padding: EdgeInsets.all(10),
+          margin: const EdgeInsets.all(5),
+          padding: const EdgeInsets.all(10),
           child: ListTile(
             tileColor: Vx.blue200,
             leading: const Icon(Icons.merge_outlined),
@@ -38,22 +38,22 @@ class PdfOperationsList extends StatelessWidget {
         10.heightBox,
         (store.mergedFilePath.isNotEmpty)
             ? Container(
-                margin: EdgeInsets.all(5),
-                padding: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(5),
+                padding: const EdgeInsets.all(10),
                 child: Wrap(
                   alignment: WrapAlignment.center,
                   crossAxisAlignment: WrapCrossAlignment.center,
                   children: [
                     "Selected Path: ".text.bold.make(),
-                    "${store.saveFilePath}".text.ellipsis.make(),
+                    store.saveFilePath.text.ellipsis.make(),
                     2.widthBox,
                     const Icon(Icons.change_circle_outlined)
                   ],
                 ),
               ).onTap(() async {
-                String result = (await FilePicker.platform.getDirectoryPath())!;
+                String? result = (await FilePicker.platform.getDirectoryPath());
 
-                setSaveFilePath(result);
+                setSaveFilePath(result ?? "");
               })
             : Container(),
         10.heightBox,
@@ -63,7 +63,7 @@ class PdfOperationsList extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () async {
-                      if (store.saveFilePath.length == 0) {
+                      if (store.saveFilePath.isEmpty) {
                         String result =
                             (await FilePicker.platform.getDirectoryPath())!;
 

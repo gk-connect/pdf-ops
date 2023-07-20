@@ -25,9 +25,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorSchemeSeed: Colors.green,
-        textTheme: GoogleFonts.notoSansTextTheme(
-          Theme.of(context).textTheme,
-        ),
+        // textTheme: GoogleFonts.notoSansTextTheme(
+        //   Theme.of(context).textTheme,
+        // ),
       ),
     );
   }
