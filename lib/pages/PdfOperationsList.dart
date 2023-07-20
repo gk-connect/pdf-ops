@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:pdf_ops/management/AppStore.dart';
 import 'package:pdf_ops/management/mutations.dart';
 import 'package:pdf_ops/widgets/snackbar.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 @RoutePage()
@@ -83,7 +84,23 @@ class PdfOperationsList extends StatelessWidget {
                         "Download".text.bold.make(),
                       ],
                     ),
-                  )
+                  ),
+                  6.widthBox,
+                  ElevatedButton(
+                    onPressed: () async {
+                      Share.shareXFiles(
+                          [XFile(store.mergedFilePath!.toString())],
+                          text: 'Merged PDF');
+                    },
+                    child: Wrap(
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      children: [
+                        const Icon(Icons.share),
+                        5.widthBox,
+                        "Share".text.bold.make(),
+                      ],
+                    ),
+                  ),
                 ],
               )
             : Container()
